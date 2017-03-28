@@ -102,7 +102,6 @@ blocks = soup.find('div', 'vc_tta-container')
 links_block = blocks.find_all('p')
 for link_block in links_block:
     if link_block.select_one('a'):
-        print link_block
         csvtext = link_block.find('a').text
         if '.csv' in link_block.find('a')['href']:
             url = link_block.find('a')['href']
